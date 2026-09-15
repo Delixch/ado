@@ -1,0 +1,232 @@
+/* ============================================================
+   tokens.css — ADO Management Design System
+   KURAL: Bu dosya dışında hiçbir yerde renk/boyut hardcode yazılmaz.
+   Tüm değerler var(--...) ile kullanılır.
+   ============================================================ */
+
+:root {
+
+  /* ══════════════════════════════════════════
+     RENKLER — Ana Palet
+  ══════════════════════════════════════════ */
+
+  --color-primary:           #2563EB;
+  --color-primary-dark:      #1E40AF;
+  --color-primary-light:     #3B82F6;
+  --color-primary-subtle:    rgba(37, 99, 235, 0.12);
+
+  --color-accent:            #10B981;
+  --color-accent-dark:       #059669;
+  --color-accent-light:      #34D399;
+  --color-accent-subtle:     rgba(16, 185, 129, 0.12);
+
+  --color-danger:            #EF4444;
+  --color-danger-dark:       #DC2626;
+  --color-danger-light:      #F87171;
+  --color-danger-subtle:     rgba(239, 68, 68, 0.12);
+
+  --color-warning:           #F59E0B;
+  --color-warning-dark:      #D97706;
+  --color-warning-light:     #FCD34D;
+  --color-warning-subtle:    rgba(245, 158, 11, 0.12);
+
+  --color-info:              #3B82F6;
+  --color-info-subtle:       rgba(59, 130, 246, 0.12);
+
+  --color-purple:            #8B5CF6;
+  --color-purple-subtle:     rgba(139, 92, 246, 0.12);
+
+  /* ══════════════════════════════════════════
+     RENKLER — Arka Plan & Yüzey
+  ══════════════════════════════════════════ */
+
+  --color-bg:                #0B0F1A;
+  --color-bg-secondary:      #0F1117;
+
+  --color-surface:           #141928;
+  --color-surface-2:         #1C2333;
+  --color-surface-3:         #242D42;
+  --color-surface-hover:     #2A3650;
+  --color-surface-active:    #1E40AF22;
+
+  /* ══════════════════════════════════════════
+     RENKLER — Metin
+  ══════════════════════════════════════════ */
+
+  --color-text:              #F1F5F9;
+  --color-text-secondary:    #CBD5E1;
+  --color-text-muted:        #94A3B8;
+  --color-text-disabled:     #475569;
+  --color-text-inverse:      #0B0F1A;
+
+  /* ══════════════════════════════════════════
+     RENKLER — Kenarlık
+  ══════════════════════════════════════════ */
+
+  --color-border:            #1E2D45;
+  --color-border-light:      #263352;
+  --color-border-focus:      var(--color-primary);
+
+  /* ══════════════════════════════════════════
+     RENKLER — Durum (Status)
+  ══════════════════════════════════════════ */
+
+  --color-status-active:     #10B981;   /* İçeride / Çalışıyor */
+  --color-status-absent:     #EF4444;   /* Dışarıda */
+  --color-status-leave:      #F59E0B;   /* İzinde */
+  --color-status-sick:       #8B5CF6;   /* Hasta */
+  --color-status-pending:    #3B82F6;   /* Onay bekliyor */
+  --color-status-empty:      #475569;   /* Boş vardiya */
+  --color-status-approved:   #10B981;   /* Onaylandı */
+  --color-status-rejected:   #EF4444;   /* Reddedildi */
+  --color-status-onboarding: #F59E0B;   /* Onboarding */
+
+  /* ══════════════════════════════════════════
+     TİPOGRAFİ
+  ══════════════════════════════════════════ */
+
+  --font-family:             'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-mono:        'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  --font-size-2xs:           0.625rem;    /* 10px */
+  --font-size-xs:            0.75rem;     /* 12px */
+  --font-size-sm:            0.875rem;    /* 14px */
+  --font-size-base:          1rem;        /* 16px */
+  --font-size-lg:            1.125rem;    /* 18px */
+  --font-size-xl:            1.25rem;     /* 20px */
+  --font-size-2xl:           1.5rem;      /* 24px */
+  --font-size-3xl:           1.875rem;    /* 30px */
+  --font-size-4xl:           2.25rem;     /* 36px */
+  --font-size-5xl:           3rem;        /* 48px */
+
+  --font-weight-normal:      400;
+  --font-weight-medium:      500;
+  --font-weight-semibold:    600;
+  --font-weight-bold:        700;
+  --font-weight-extrabold:   800;
+
+  --line-height-tight:       1.25;
+  --line-height-snug:        1.375;
+  --line-height-normal:      1.5;
+  --line-height-relaxed:     1.625;
+
+  --letter-spacing-tight:    -0.025em;
+  --letter-spacing-normal:   0em;
+  --letter-spacing-wide:     0.025em;
+  --letter-spacing-wider:    0.05em;
+  --letter-spacing-widest:   0.1em;
+
+  /* ══════════════════════════════════════════
+     SPACING (8px Bazlı)
+  ══════════════════════════════════════════ */
+
+  --space-px:    1px;
+  --space-0-5:   0.125rem;   /*  2px */
+  --space-1:     0.25rem;    /*  4px */
+  --space-1-5:   0.375rem;   /*  6px */
+  --space-2:     0.5rem;     /*  8px */
+  --space-2-5:   0.625rem;   /* 10px */
+  --space-3:     0.75rem;    /* 12px */
+  --space-3-5:   0.875rem;   /* 14px */
+  --space-4:     1rem;       /* 16px */
+  --space-5:     1.25rem;    /* 20px */
+  --space-6:     1.5rem;     /* 24px */
+  --space-7:     1.75rem;    /* 28px */
+  --space-8:     2rem;       /* 32px */
+  --space-9:     2.25rem;    /* 36px */
+  --space-10:    2.5rem;     /* 40px */
+  --space-12:    3rem;       /* 48px */
+  --space-14:    3.5rem;     /* 56px */
+  --space-16:    4rem;       /* 64px */
+  --space-20:    5rem;       /* 80px */
+  --space-24:    6rem;       /* 96px */
+
+  /* ══════════════════════════════════════════
+     BOYUTLAR
+  ══════════════════════════════════════════ */
+
+  --topbar-height:           3.5rem;     /* 56px */
+  --sidebar-width:           16rem;      /* 256px — şimdilik kullanılmıyor */
+  --panel-width:             38rem;      /* 608px — slide panel genişliği */
+  --container-max:           90rem;      /* 1440px */
+  --tile-min-height:         9rem;       /* 144px */
+  --tile-min-height-lg:      18rem;      /* 288px */
+
+  /* ══════════════════════════════════════════
+     BORDER RADIUS
+  ══════════════════════════════════════════ */
+
+  --radius-xs:   0.25rem;    /*  4px */
+  --radius-sm:   0.375rem;   /*  6px */
+  --radius-md:   0.625rem;   /* 10px */
+  --radius-lg:   0.875rem;   /* 14px */
+  --radius-xl:   1.25rem;    /* 20px */
+  --radius-2xl:  1.75rem;    /* 28px */
+  --radius-full: 9999px;
+
+  /* ══════════════════════════════════════════
+     GÖLGE
+  ══════════════════════════════════════════ */
+
+  --shadow-xs:   0 1px 2px rgba(0,0,0,0.25);
+  --shadow-sm:   0 1px 4px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.25);
+  --shadow-lg:   0 8px 24px rgba(0,0,0,0.5), 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-xl:   0 16px 48px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.35);
+
+  --shadow-glow-primary: 0 0 24px rgba(37, 99, 235, 0.35);
+  --shadow-glow-accent:  0 0 24px rgba(16, 185, 129, 0.35);
+  --shadow-glow-danger:  0 0 24px rgba(239, 68, 68, 0.35);
+
+  --shadow-inset: inset 0 1px 3px rgba(0,0,0,0.3);
+
+  /* ══════════════════════════════════════════
+     TRANSİSYON
+  ══════════════════════════════════════════ */
+
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in:      cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
+  --ease-bounce:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring:  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --duration-fast:   120ms;
+  --duration-normal: 220ms;
+  --duration-slow:   380ms;
+  --duration-slower: 550ms;
+
+  --transition-fast:   var(--duration-fast) var(--ease-default);
+  --transition-normal: var(--duration-normal) var(--ease-default);
+  --transition-slow:   var(--duration-slow) var(--ease-default);
+  --transition-bounce: var(--duration-normal) var(--ease-bounce);
+
+  /* ══════════════════════════════════════════
+     Z-INDEX
+  ══════════════════════════════════════════ */
+
+  --z-base:     0;
+  --z-above:    10;
+  --z-dropdown: 50;
+  --z-sticky:   80;
+  --z-topbar:   90;
+  --z-panel:    100;
+  --z-overlay:  150;
+  --z-modal:    200;
+  --z-toast:    300;
+  --z-tooltip:  400;
+
+  /* ══════════════════════════════════════════
+     BENTO GRID
+  ══════════════════════════════════════════ */
+
+  --bento-columns:  12;
+  --bento-gap:      var(--space-4);
+  --bento-padding:  var(--space-6);
+
+  /* ══════════════════════════════════════════
+     BREAKPOINTS (referans — CSS'de kullanılmaz, sadece belge)
+     mobile:  < 768px
+     tablet:  768px - 1023px
+     desktop: >= 1024px
+  ══════════════════════════════════════════ */
+}

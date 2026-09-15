@@ -1,0 +1,123 @@
+/* ============================================================
+   mobile.css — ADO Management
+   max-width: 767px
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* ── BENTO GRID ─────────────────────────────────────────── */
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  /* Tüm tile'lar mobilde 2 sütun */
+  .tile-sm  { grid-column: span 1; grid-row: span 1; }
+  .tile-md  { grid-column: span 2; grid-row: span 1; }
+  .tile-lg  { grid-column: span 2; grid-row: span 1; }
+  .tile-xl  { grid-column: span 2; grid-row: span 1; }
+  .tile-full{ grid-column: span 2; }
+
+  /* Span sınıfları da override */
+  .tile-1,.tile-2,.tile-3 { grid-column: span 1; }
+  .tile-4,.tile-5,.tile-6,
+  .tile-7,.tile-8,.tile-9,
+  .tile-10,.tile-11,.tile-12 { grid-column: span 2; }
+
+  /* ── TOPBAR ─────────────────────────────────────────────── */
+
+  .topbar {
+    padding: 0 var(--space-4);
+  }
+
+  .topbar__logo-text { display: none; }
+
+  /* ── PANEL → Full Screen ────────────────────────────────── */
+
+  .panel {
+    width: 100vw;
+    top: 0;
+    border-left: none;
+    border-radius: 0;
+  }
+
+  /* ── TILE ───────────────────────────────────────────────── */
+
+  .tile {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .tile__value {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* ── TABLE ──────────────────────────────────────────────── */
+
+  /* Tablo yatay scroll */
+  .table-wrapper {
+    border-radius: var(--radius-md);
+  }
+
+  .table th,
+  .table td {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+  }
+
+  /* ── BUTTON ─────────────────────────────────────────────── */
+
+  /* Daha büyük dokunma alanı (44px min) */
+  .btn {
+    min-height: 2.75rem;
+    padding: var(--space-2-5) var(--space-4);
+  }
+
+  .btn--xs, .btn--sm {
+    min-height: 2.25rem;
+  }
+
+  /* ── FORM ───────────────────────────────────────────────── */
+
+  .form-input,
+  .form-select {
+    min-height: 2.75rem;
+    font-size: var(--font-size-base); /* iOS zoom engellemek için 16px */
+  }
+
+  /* ── GRID HELPERS ───────────────────────────────────────── */
+
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── STAT CARDS ─────────────────────────────────────────── */
+
+  .stat-card__value {
+    font-size: var(--font-size-xl);
+  }
+
+  /* ── PANEL BODY ─────────────────────────────────────────── */
+
+  .panel__body {
+    padding: var(--space-4);
+  }
+
+  .panel__header,
+  .panel__footer {
+    padding: var(--space-4);
+  }
+
+  /* ── KIOSK MODU ─────────────────────────────────────────── */
+
+  .kiosk-pin {
+    font-size: var(--font-size-5xl);
+  }
+
+  .kiosk-btn {
+    min-height: 5rem;
+    font-size: var(--font-size-2xl);
+  }
+}

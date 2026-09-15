@@ -1,0 +1,72 @@
+/* ============================================================
+   tablet.css — ADO Management
+   768px – 1023px
+   ============================================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* ── BENTO GRID ─────────────────────────────────────────── */
+
+  .bento-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
+
+  .tile-sm  { grid-column: span 3; grid-row: span 1; }
+  .tile-md  { grid-column: span 3; grid-row: span 1; }
+  .tile-lg  { grid-column: span 6; grid-row: span 1; }
+  .tile-xl  { grid-column: span 6; grid-row: span 2; }
+  .tile-full{ grid-column: span 6; }
+
+  .tile-1  { grid-column: span 1; }
+  .tile-2  { grid-column: span 2; }
+  .tile-3  { grid-column: span 3; }
+  .tile-4  { grid-column: span 4; }
+  .tile-5  { grid-column: span 5; }
+  .tile-6  { grid-column: span 6; }
+  .tile-7, .tile-8, .tile-9,
+  .tile-10, .tile-11, .tile-12 { grid-column: span 6; }
+
+  /* ── PANEL → Bottom Sheet ────────────────────────────────── */
+
+  .panel {
+    width: 100vw;
+    top: auto;
+    bottom: 0;
+    height: 85vh;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    transform: translateY(100%);
+  }
+
+  .panel.panel--open {
+    transform: translateY(0);
+  }
+
+  /* ── TOPBAR ─────────────────────────────────────────────── */
+
+  .topbar {
+    padding: 0 var(--space-5);
+  }
+
+  /* ── GRID HELPERS ───────────────────────────────────────── */
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── KIOSK ──────────────────────────────────────────────── */
+
+  /* Tablet kiosk modu için optimize edilmiş dokunma alanları */
+  .kiosk-btn {
+    min-height: 6rem;
+    font-size: var(--font-size-3xl);
+  }
+
+  .kiosk-pin {
+    font-size: calc(var(--font-size-5xl) * 1.5);
+    letter-spacing: var(--letter-spacing-wider);
+  }
+}
